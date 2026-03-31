@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>TBR Randomizer</title>
+<title>TBR Roulette</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
 <style>
@@ -55,17 +55,17 @@ body{
   position:relative;
   z-index:1;
 }
-/* cream shoulder panel */
+/* cream panel on right */
 .hero::before{
   content:'';
   position:absolute;
   top:0;right:0;
-  width:18%;height:100%;
+  width:38%;height:100%;
   background:var(--stripe-cream);
-  clip-path:polygon(30% 0,100% 0,100% 100%,0% 100%);
+  clip-path:polygon(18% 0,100% 0,100% 100%,0% 100%);
 }
-@media(min-width:480px){
-  .hero::before{width:38%;clip-path:polygon(18% 0,100% 0,100% 100%,0% 100%);}
+@media(max-width:480px){
+  .hero::before{width:22%;clip-path:polygon(30% 0,100% 0,100% 100%,0% 100%);}
 }
 /* green stripe */
 .hero::after{
@@ -89,9 +89,12 @@ h1{
   color:var(--white);
   letter-spacing:-.01em;
   margin-bottom:4px;
-  text-shadow:0 1px 3px rgba(0,0,0,0.1);
 }
 h1 em{font-style:italic;}
+h1 .tbr{
+  color:var(--green);
+  font-style:normal;
+}
 .h1-sub{
   font-size:13px;font-weight:300;
   color:rgba(255,255,255,0.75);
@@ -175,13 +178,13 @@ textarea{width:100%;min-height:100px;padding:10px 12px;resize:vertical;margin-bo
 /* ── Buttons ── */
 .add-btn{
   height:42px;padding:0 20px;
-  background:var(--ink);
+  background:var(--green);
   border:none;border-radius:10px;
   font-size:13px;font-family:'DM Sans',sans-serif;font-weight:600;letter-spacing:.04em;text-transform:uppercase;
   cursor:pointer;white-space:nowrap;color:var(--white);flex-shrink:0;
   transition:all .15s;
 }
-.add-btn:hover{background:var(--ink-mid);}
+.add-btn:hover{background:var(--green-light);}
 .add-btn:active{transform:scale(.97);}
 .add-btn:disabled{opacity:.35;cursor:default;}
 
@@ -444,8 +447,8 @@ input[type=checkbox]{accent-color:var(--green);cursor:pointer;width:15px;height:
   <div class="hero-inner-wrap">
     <div class="hero-inner">
       <span class="hero-tag">Fresh Chapter</span>
-      <h1>TBR <em>Randomizer</em></h1>
-      <p class="h1-sub">what to read next?</p>
+      <h1>TBR <em>Roulette</em></h1>
+      <p class="h1-sub">What to read next?</p>
     </div>
   </div>
 </div>
