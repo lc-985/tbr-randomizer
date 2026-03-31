@@ -1,7 +1,8 @@
 {
   "name": "TBR Roulette",
   "short_name": "TBR Roulette",
-  "start_url": "/",
+  "start_url": "/tbr-randomizer/",
+  "scope": "/tbr-randomizer/",
   "display": "standalone",
   "background_color": "#a8bfe8",
   "theme_color": "#a8bfe8",
