@@ -55,6 +55,34 @@ body{
   position:relative;
   z-index:1;
 }
+/* icon sits inline to the right, vertically centred with the title/subhead */
+.hero-icon{
+  position:absolute;
+  right:20%;
+  top:50%;
+  transform:translateY(-50%);
+  width:96px;height:96px;
+  z-index:10;
+}
+.hero-icon svg{width:100%;height:100%;}
+@media(min-width:480px){
+  .hero-icon{right:1.5rem;width:106px;height:106px;}
+}
+/* resource link */
+.resource-link{
+  display:block;text-align:center;
+  margin-top:1.25rem;
+  padding:14px 16px;
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:12px;
+  font-size:13px;font-weight:500;
+  color:var(--peri-deep);
+  text-decoration:none;
+  transition:background .15s,border-color .15s;
+}
+.resource-link:hover{background:var(--peri-pale);border-color:var(--periwinkle);}
+.resource-link span{display:block;font-size:11px;color:var(--ink-light);font-weight:300;margin-top:2px;}
 /* cream panel on right */
 .hero::before{
   content:'';
@@ -75,7 +103,7 @@ body{
   height:10px;
   background:var(--green);
 }
-.hero-inner{position:relative;z-index:1;padding-bottom:2rem;}
+.hero-inner{position:relative;z-index:1;padding-bottom:2rem;padding-right:96px;}
 .hero-tag{
   display:inline-block;
   font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
@@ -446,9 +474,38 @@ input[type=checkbox]{accent-color:var(--green);cursor:pointer;width:15px;height:
 <div class="hero">
   <div class="hero-inner-wrap">
     <div class="hero-inner">
-      <span class="hero-tag">Fresh Chapter</span>
+      <span class="hero-tag">A Fresh Chapter</span>
       <h1>TBR <em>Roulette</em></h1>
-      <p class="h1-sub">What to read next?</p>
+      <p class="h1-sub">Pick your next read</p>
+    </div>
+    <!-- icon badge sitting over the blue/cream boundary -->
+    <div class="hero-icon">
+      <svg viewBox="0 0 660.02 660.02" xmlns="http://www.w3.org/2000/svg">
+        <defs><style>.ci1{fill:none;stroke:#6e5c8c;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.75px;}.ci2{fill:#6e5c8c;}.ci3{fill:#fff;}.ci4{fill:#9db6e3;}</style></defs>
+        <g><g>
+          <path class="ci3" d="M660.02,330.01c0,21.11-29.66,39.03-33.61,58.98-4.07,20.56,16.4,48.43,8.56,67.35-7.98,19.24-42.25,24.44-53.7,41.55-11.54,17.24-3.3,50.87-17.92,65.48-14.61,14.61-48.25,6.38-65.48,17.92-17.1,11.45-22.3,45.72-41.55,53.7-18.91,7.84-46.79-12.63-67.35-8.56-19.95,3.95-37.87,33.61-58.98,33.61s-39.03-29.66-58.98-33.61-48.43,16.4-67.35,8.56c-19.24-7.98-24.44-42.25-41.55-53.7-17.24-11.54-50.87-3.3-65.48-17.92-14.61-14.61-6.38-48.25-17.92-65.48-11.45-17.1-45.72-22.3-53.7-41.55-7.84-18.91,12.63-46.79,8.56-67.35-3.95-19.95-33.61-37.87-33.61-58.98s29.66-39.03,33.61-58.98c4.07-20.56-16.4-48.43-8.56-67.35s42.25-24.44,53.7-41.55c11.54-17.24,3.3-50.87,17.92-65.48,14.61-14.61,48.25-6.38,65.48-17.92,17.1-11.45,22.3-45.72,41.55-53.7,18.91-7.84,46.79,12.63,67.35,8.56,19.95-3.95,37.87-33.61,58.98-33.61s39.03,29.66,58.98,33.61c20.56,4.07,48.43-16.4,67.35-8.56,19.24,7.98,24.44,42.25,41.55,53.7,17.24,11.54,50.87,3.3,65.48,17.92,14.61,14.61,6.38,48.25,17.92,65.48,11.45,17.1,45.72,22.3,53.7,41.55,7.84,18.91-12.63,46.79-8.56,67.35,3.95,19.95,33.61,37.87,33.61,58.98Z"/>
+          <g>
+            <path class="ci4" d="M394.6,401.66v-230.07c-31.14-12.78-66.07-12.78-97.21,0v326.27c0,3.74,3.04,6.78,6.78,6.78h83.65c3.74,0,6.78-3.04,6.78-6.78v-96.2M360.48,473.41h-28.28v-71.75h28.28v71.75Z"/>
+            <path class="ci4" d="M421.35,246.51v251.35c0,3.74,3.04,6.78,6.78,6.78h61.78c3.74,0,6.78-3.04,6.78-6.78v-251.35c-24.14-9.91-51.21-9.91-75.34,0ZM470.25,480.43h-21.92v-55.61h21.92v55.61Z"/>
+            <path class="ci1" d="M287.29,496.02h97.21V162.97h0c-31.14-12.78-66.07-12.78-97.21,0h0v333.05Z"/>
+            <polygon class="ci2" points="307.18 221.88 317.96 212.34 328.74 221.88 328.74 153.38 307.18 157.09 307.18 221.88"/>
+            <rect class="ci1" x="322.1" y="393.04" width="28.28" height="71.75" transform="translate(672.47 857.82) rotate(180)"/>
+            <path class="ci1" d="M411.25,496.02h75.34V237.89h0c-24.14-9.91-51.21-9.91-75.34,0h0v258.12Z"/>
+            <polygon class="ci2" points="426.67 283.55 435.02 276.15 443.37 283.55 443.37 230.46 426.67 233.34 426.67 283.55"/>
+            <rect class="ci1" x="438.22" y="416.2" width="21.92" height="55.61" transform="translate(898.37 888.02) rotate(180)"/>
+            <line class="ci1" x1="454.99" y1="310.27" x2="454.99" y2="396.6"/>
+            <line class="ci1" x1="443.37" y1="310.27" x2="443.37" y2="396.6"/>
+            <line class="ci1" x1="343.73" y1="256.36" x2="343.73" y2="367.75"/>
+            <line class="ci1" x1="328.74" y1="256.36" x2="328.74" y2="367.75"/>
+            <path class="ci4" d="M173.43,201.78v296.08c0,3.74,3.04,6.78,6.78,6.78h83.65c3.74,0,6.78-3.04,6.78-6.78V201.78c-31.14-12.78-66.07-12.78-97.21,0ZM236.52,473.41h-28.28v-71.75h28.28v71.75Z"/>
+            <path class="ci1" d="M163.33,496.02h97.21V193.16h0c-31.14-12.78-66.07-12.78-97.21,0h0v302.86Z"/>
+            <polygon class="ci2" points="183.23 252.07 194.01 242.52 204.78 252.07 204.78 183.57 183.23 187.28 183.23 252.07"/>
+            <rect class="ci1" x="198.14" y="393.04" width="28.28" height="71.75" transform="translate(424.56 857.82) rotate(180)"/>
+            <line class="ci1" x1="219.78" y1="286.54" x2="219.78" y2="367.75"/>
+            <line class="ci1" x1="204.78" y1="286.54" x2="204.78" y2="367.75"/>
+          </g>
+        </g></g>
+      </svg>
     </div>
   </div>
 </div>
@@ -564,6 +621,9 @@ input[type=checkbox]{accent-color:var(--green);cursor:pointer;width:15px;height:
         <div class="scroll-fade-bottom"></div>
       </div>
     </div>
+    <a href="https://oceanofpdf.com/" target="_blank" class="resource-link">
+      📖 &nbsp;Download your next read
+    </a>
   </div>
 </div>
 
